@@ -17,7 +17,7 @@ data "aws_ecr_repository" "ecr_repo" {
   name = var.ecr_repo
 }
 
-data "aws_subnet" "default_vpc_subnet" {
+data "aws_subnets" "default_vpc_subnets" {
   filter {
     name   = "vpc-id"
     values = [aws_default_vpc.default.id]
