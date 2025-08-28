@@ -16,8 +16,6 @@ resource "aws_security_group" "Task-SG" {
 resource "aws_vpc_security_group_ingress_rule" "outbound-allow-task-sg" {
   security_group_id            = aws_security_group.Task-SG.id
   ip_protocol                  = -1
-  from_port                    = var.container-port
-  to_port                      = var.container-port
   referenced_security_group_id = aws_security_group.ALB-SG.id
 }
 resource "aws_vpc_security_group_egress_rule" "inbound-allow-task-sg" {

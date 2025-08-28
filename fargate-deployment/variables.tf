@@ -13,3 +13,7 @@ variable "container-port" {
   default = 5000
 
 }
+variable "path-check" {
+  default = "/"
+
+}
