@@ -7,10 +7,11 @@ resource "aws_lb" "ALB" {
 }
 
 resource "aws_lb_target_group" "ALG-TG" {
-  name     = "${var.app-name}-ALB-TG"
-  port     = var.container-port
-  protocol = "HTTP"
-  vpc_id   = aws_default_vpc.default.id
+  name        = "${var.app-name}-ALB-TG"
+  port        = var.container-port
+  protocol    = "HTTP"
+  vpc_id      = aws_default_vpc.default.id
+  target_type = "ip"
   health_check {
     path                = var.path-check
     interval            = 30

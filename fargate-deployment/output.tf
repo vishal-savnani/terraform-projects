@@ -1,7 +1,10 @@
 
 output "ecr" {
-  value = data.aws_ecr_repository.ecr_repo.repository_url
+  value = data.aws_ecr_repository.ecr_repo
 }
 output "subnets" {
   value = data.aws_subnets.default_vpc_subnets.ids
+}
+output "image" {
+  value = data.aws_ecr_image.image.id
 }

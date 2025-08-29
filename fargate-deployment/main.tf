@@ -24,3 +24,7 @@ data "aws_subnets" "default_vpc_subnets" {
   }
 }
 
+data "aws_ecr_image" "image" {
+  repository_name = data.aws_ecr_repository.ecr_repo.name
+  most_recent     = true
+}

@@ -13,7 +13,22 @@ variable "container-port" {
   default = 5000
 
 }
+
+variable "host-port" {
+  default = 5000
+}
 variable "path-check" {
   default = "/"
 
+}
+variable "desired_count" {
+  default = 2
+}
+
+variable "mem" {
+  default = "512"
+}
+
+variable "cpu" {
+  default = "256"
 }
