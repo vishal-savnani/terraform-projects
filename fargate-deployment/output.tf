@@ -8,3 +8,6 @@ output "subnets" {
 output "image" {
   value = data.aws_ecr_image.image.id
 }
+output "domain" {
+  value = aws_lb.ALB.dns_name
+}
